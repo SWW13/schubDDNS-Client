@@ -43,6 +43,7 @@
             this.Close = new System.Windows.Forms.Button();
             this.Token = new System.Windows.Forms.TextBox();
             this.UpdateURL = new System.Windows.Forms.TextBox();
+            this.UpdateNow = new System.Windows.Forms.Button();
             this.TrayContextMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Interval)).BeginInit();
             this.SuspendLayout();
@@ -139,10 +140,18 @@
             this.UpdateURL.Name = "UpdateURL";
             this.UpdateURL.Text = global::schubDDNS_Client.Properties.Settings.Default.UpdateURL;
             // 
+            // UpdateNow
+            // 
+            resources.ApplyResources(this.UpdateNow, "UpdateNow");
+            this.UpdateNow.Name = "UpdateNow";
+            this.UpdateNow.UseVisualStyleBackColor = true;
+            this.UpdateNow.Click += new System.EventHandler(this.UpdateNow_Click);
+            // 
             // SettingsForm
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.UpdateNow);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Interval);
             this.Controls.Add(this.Close);
@@ -180,6 +189,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button Save;
         private System.Windows.Forms.Button Close;
+        private System.Windows.Forms.Button UpdateNow;
     }
 }
 
