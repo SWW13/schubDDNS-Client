@@ -124,6 +124,18 @@
     <value>115, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="TrayContextMenu_ShowSettings.Size" type="System.Drawing.Size, System.Drawing">
+    <value>148, 22</value>
+  </data>
+  <data name="TrayContextMenu_ShowSettings.Text" xml:space="preserve">
+    <value>Show Settings</value>
+  </data>
+  <data name="TrayContextMenu_Close.Size" type="System.Drawing.Size, System.Drawing">
+    <value>148, 22</value>
+  </data>
+  <data name="TrayContextMenu_Close.Text" xml:space="preserve">
+    <value>Close</value>
+  </data>
   <data name="TrayContextMenu.Size" type="System.Drawing.Size, System.Drawing">
     <value>149, 48</value>
   </data>
@@ -161,23 +173,11 @@
 </value>
   </data>
   <data name="TrayIcon.Text" xml:space="preserve">
-    <value>TrayIcon</value>
+    <value>schubDDNS</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="TrayIcon.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
-  </data>
-  <data name="TrayContextMenu_ShowSettings.Size" type="System.Drawing.Size, System.Drawing">
-    <value>148, 22</value>
-  </data>
-  <data name="TrayContextMenu_ShowSettings.Text" xml:space="preserve">
-    <value>Show Settings</value>
-  </data>
-  <data name="TrayContextMenu_Close.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
-  </data>
-  <data name="TrayContextMenu_Close.Text" xml:space="preserve">
-    <value>Close</value>
   </data>
   <data name="label_UpdateURL.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
