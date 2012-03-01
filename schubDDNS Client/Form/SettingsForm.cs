@@ -13,6 +13,7 @@ namespace schubDDNS_Client
 {
     public partial class SettingsForm : Form
     {
+        bool CloseFromTrayIcon = false;
         Timer UpdateTimer = new Timer();
 
         public SettingsForm()
@@ -28,13 +29,13 @@ namespace schubDDNS_Client
             //Hide Settings Window after Start
             this.Visible = false;
         }
-        private void Settings_FormClosing(object sender, FormClosingEventArgs e)
+        private void SettingsForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            DialogResult reslut = 
-                MessageBox.Show("If you close the schubDDNS Client it will no longer update your IP.\nAre you sure? Click No Abort.", "schubDDNS Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-
-            if (reslut == System.Windows.Forms.DialogResult.No)
+            if (!CloseFromTrayIcon)
+            {
                 e.Cancel = true;
+                this.Visible = false;
+            }
         }
 
         private void UpdateNow_Click(object sender, EventArgs e)
@@ -62,10 +63,6 @@ namespace schubDDNS_Client
             //Info Msg
             MessageBox.Show("Settings saved successfully! :)", "schubDDNS Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
-        private void Close_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
 
         private void UpdateTimer_Tick(object sender, EventArgs e)
         {
@@ -76,18 +73,26 @@ namespace schubDDNS_Client
         {
             ToggleVisible();
         }
-        private void TrayContextMenu_Settings_Click(object sender, EventArgs e)
+        private void TrayContextMenu_ShowSettings_Click(object sender, EventArgs e)
         {
-            ToggleVisible();
+            this.Visible = true;
+            this.BringToFront();
         }
         private void TrayContextMenu_Close_Click(object sender, EventArgs e)
         {
-            this.Close();
+            DialogResult reslut =
+                    MessageBox.Show("If you close the schubDDNS Client it will no longer update your IP.\nAre you sure? Click No Abort.", "schubDDNS Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            if (reslut == System.Windows.Forms.DialogResult.Yes)
+            {
+                CloseFromTrayIcon = true;
+                this.Close();
+            }
         }
 
         private void ToggleVisible()
         {
-            if (!this.Visible || !this.Focused)
+            if (!this.Visible)
             {
                 this.Visible = true;
                 this.BringToFront();

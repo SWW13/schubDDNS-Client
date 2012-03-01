@@ -7,6 +7,8 @@ using System.Net;
 using System.IO;
 using System.Windows.Forms;
 using System.Collections;
+using System.Net.Security;
+using System.Security.Cryptography.X509Certificates;
 
 namespace schubDDNS_Client
 {
@@ -16,6 +18,9 @@ namespace schubDDNS_Client
         {
             URL = URL.ToLower();
             string strResult = null;
+
+            //Deactivate SSL verification
+            ServicePointManager.ServerCertificateValidationCallback = new RemoteCertificateValidationCallback(AcceptAllCertifications);
 
             //Webrequest
             try
@@ -70,6 +75,11 @@ namespace schubDDNS_Client
         {
             String URL = UpdateURL.ToLower().Replace("<token>", Token);
             return Update(URL);
+        }
+
+        public static bool AcceptAllCertifications(object sender, X509Certificate certification, X509Chain chain, SslPolicyErrors sslPolicyErrors)
+        {
+            return true;
         }
     }
 }

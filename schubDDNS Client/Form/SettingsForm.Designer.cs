@@ -32,7 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SettingsForm));
             this.TrayIcon = new System.Windows.Forms.NotifyIcon(this.components);
             this.TrayContextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.TrayContextMenu_Settings = new System.Windows.Forms.ToolStripMenuItem();
+            this.TrayContextMenu_ShowSettings = new System.Windows.Forms.ToolStripMenuItem();
             this.TrayContextMenu_Close = new System.Windows.Forms.ToolStripMenuItem();
             this.label_UpdateURL = new System.Windows.Forms.Label();
             this.label_Token = new System.Windows.Forms.Label();
@@ -40,7 +40,6 @@
             this.Interval = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
             this.Save = new System.Windows.Forms.Button();
-            this.Close = new System.Windows.Forms.Button();
             this.Token = new System.Windows.Forms.TextBox();
             this.UpdateURL = new System.Windows.Forms.TextBox();
             this.UpdateNow = new System.Windows.Forms.Button();
@@ -57,17 +56,17 @@
             // TrayContextMenu
             // 
             this.TrayContextMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.TrayContextMenu_Settings,
+            this.TrayContextMenu_ShowSettings,
             this.TrayContextMenu_Close});
             this.TrayContextMenu.Name = "TrayContextMenu";
             this.TrayContextMenu.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
             resources.ApplyResources(this.TrayContextMenu, "TrayContextMenu");
             // 
-            // TrayContextMenu_Settings
+            // TrayContextMenu_ShowSettings
             // 
-            this.TrayContextMenu_Settings.Name = "TrayContextMenu_Settings";
-            resources.ApplyResources(this.TrayContextMenu_Settings, "TrayContextMenu_Settings");
-            this.TrayContextMenu_Settings.Click += new System.EventHandler(this.TrayContextMenu_Settings_Click);
+            this.TrayContextMenu_ShowSettings.Name = "TrayContextMenu_ShowSettings";
+            resources.ApplyResources(this.TrayContextMenu_ShowSettings, "TrayContextMenu_ShowSettings");
+            this.TrayContextMenu_ShowSettings.Click += new System.EventHandler(this.TrayContextMenu_ShowSettings_Click);
             // 
             // TrayContextMenu_Close
             // 
@@ -119,13 +118,6 @@
             this.Save.UseVisualStyleBackColor = true;
             this.Save.Click += new System.EventHandler(this.Save_Click);
             // 
-            // Close
-            // 
-            resources.ApplyResources(this.Close, "Close");
-            this.Close.Name = "Close";
-            this.Close.UseVisualStyleBackColor = true;
-            this.Close.Click += new System.EventHandler(this.Close_Click);
-            // 
             // Token
             // 
             this.Token.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::schubDDNS_Client.Properties.Settings.Default, "Token", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
@@ -149,23 +141,24 @@
             // 
             // SettingsForm
             // 
+            this.AcceptButton = this.Save;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.UpdateNow);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.UpdateNow);
             this.Controls.Add(this.Interval);
-            this.Controls.Add(this.Close);
             this.Controls.Add(this.label_Interval);
             this.Controls.Add(this.Token);
             this.Controls.Add(this.label_Token);
-            this.Controls.Add(this.Save);
             this.Controls.Add(this.UpdateURL);
+            this.Controls.Add(this.Save);
             this.Controls.Add(this.label_UpdateURL);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "SettingsForm";
             this.ShowInTaskbar = false;
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Settings_FormClosing);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.SettingsForm_FormClosing);
             this.Shown += new System.EventHandler(this.Settings_Shown);
             this.TrayContextMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Interval)).EndInit();
@@ -178,7 +171,7 @@
 
         private System.Windows.Forms.NotifyIcon TrayIcon;
         private System.Windows.Forms.ContextMenuStrip TrayContextMenu;
-        private System.Windows.Forms.ToolStripMenuItem TrayContextMenu_Settings;
+        private System.Windows.Forms.ToolStripMenuItem TrayContextMenu_ShowSettings;
         private System.Windows.Forms.ToolStripMenuItem TrayContextMenu_Close;
         private System.Windows.Forms.Label label_UpdateURL;
         private System.Windows.Forms.TextBox UpdateURL;
@@ -188,7 +181,6 @@
         private System.Windows.Forms.NumericUpDown Interval;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button Save;
-        private System.Windows.Forms.Button Close;
         private System.Windows.Forms.Button UpdateNow;
     }
 }

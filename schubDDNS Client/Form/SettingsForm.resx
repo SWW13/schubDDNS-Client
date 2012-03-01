@@ -125,7 +125,7 @@
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="TrayContextMenu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>117, 48</value>
+    <value>149, 48</value>
   </data>
   <data name="TrayContextMenu.Text" xml:space="preserve">
     <value>TrayContextMenu</value>
@@ -167,14 +167,14 @@
   <data name="TrayIcon.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="TrayContextMenu_Settings.Size" type="System.Drawing.Size, System.Drawing">
-    <value>116, 22</value>
+  <data name="TrayContextMenu_ShowSettings.Size" type="System.Drawing.Size, System.Drawing">
+    <value>148, 22</value>
   </data>
-  <data name="TrayContextMenu_Settings.Text" xml:space="preserve">
-    <value>Settings</value>
+  <data name="TrayContextMenu_ShowSettings.Text" xml:space="preserve">
+    <value>Show Settings</value>
   </data>
   <data name="TrayContextMenu_Close.Size" type="System.Drawing.Size, System.Drawing">
-    <value>116, 22</value>
+    <value>152, 22</value>
   </data>
   <data name="TrayContextMenu_Close.Text" xml:space="preserve">
     <value>Close</value>
@@ -208,7 +208,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label_UpdateURL.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>9</value>
   </data>
   <data name="label_Token.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -238,7 +238,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label_Token.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>6</value>
   </data>
   <data name="label_Interval.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -268,7 +268,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label_Interval.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>4</value>
   </data>
   <data name="Interval.Location" type="System.Drawing.Point, System.Drawing">
     <value>88, 58</value>
@@ -319,13 +319,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>1</value>
   </data>
   <data name="Save.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="Save.Location" type="System.Drawing.Point, System.Drawing">
-    <value>196, 87</value>
+    <value>277, 87</value>
   </data>
   <data name="Save.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
@@ -348,33 +348,6 @@
   <data name="&gt;&gt;Save.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
-  <data name="Close.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="Close.Location" type="System.Drawing.Point, System.Drawing">
-    <value>277, 87</value>
-  </data>
-  <data name="Close.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="Close.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="Close.Text" xml:space="preserve">
-    <value>Close</value>
-  </data>
-  <data name="&gt;&gt;Close.Name" xml:space="preserve">
-    <value>Close</value>
-  </data>
-  <data name="&gt;&gt;Close.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Close.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;Close.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
   <data name="Token.Location" type="System.Drawing.Point, System.Drawing">
     <value>88, 32</value>
   </data>
@@ -394,7 +367,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Token.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>5</value>
   </data>
   <data name="UpdateURL.Location" type="System.Drawing.Point, System.Drawing">
     <value>88, 6</value>
@@ -415,13 +388,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;UpdateURL.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>7</value>
   </data>
   <data name="UpdateNow.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="UpdateNow.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 87</value>
+    <value>172, 87</value>
   </data>
   <data name="UpdateNow.Size" type="System.Drawing.Size, System.Drawing">
     <value>99, 23</value>
@@ -442,7 +415,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;UpdateNow.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -721,10 +694,10 @@
   <data name="&gt;&gt;TrayIcon.Type" xml:space="preserve">
     <value>System.Windows.Forms.NotifyIcon, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;TrayContextMenu_Settings.Name" xml:space="preserve">
-    <value>TrayContextMenu_Settings</value>
+  <data name="&gt;&gt;TrayContextMenu_ShowSettings.Name" xml:space="preserve">
+    <value>TrayContextMenu_ShowSettings</value>
   </data>
-  <data name="&gt;&gt;TrayContextMenu_Settings.Type" xml:space="preserve">
+  <data name="&gt;&gt;TrayContextMenu_ShowSettings.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;TrayContextMenu_Close.Name" xml:space="preserve">
